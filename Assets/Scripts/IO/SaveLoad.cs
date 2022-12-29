@@ -21,6 +21,9 @@ public static class SaveLoad{
             BinaryFormatter bf = new BinaryFormatter();
             FileStream file = File.Open(Application.persistentDataPath + "/savedMoves.mvs", FileMode.Open);
             AvailableMoves.SetMoves((List<Move>)bf.Deserialize(file));
+			if(bf){
+				int k=0;
+			}
             file.Close();
         }
 	}
